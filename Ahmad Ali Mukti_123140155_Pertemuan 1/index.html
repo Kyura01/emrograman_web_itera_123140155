@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <h1>Re:Mind</h1>
+        <p>Kelola tugas kuliahmu dengan mudah dan efisien!</p>
+    </header>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-title">Total Tugas</div>
+        <div class="stat-value"><span id="task-count">0</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Belum Selesai</div>
+        <div class="stat-value"><span id="todo-count">0</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Selesai</div>
+        <div class="stat-value"><span id="done-count">0</span></div>
+      </div>
+    </div>
+
+    <section class="card add-card">
+      <h2 class="card-title">+ Tambah Tugas Baru</h2>
+      <form id="task-form" class="task-form" action="">
+        <label class="field">
+          <div class="label-text">Nama Tugas <span class="required">*</span></div>
+          <input type="text" id="task-input" placeholder="Judul tugas" required />
+        </label>
+
+        <label class="field">
+          <div class="label-text">Mata Kuliah</div>
+          <input type="text" id="mata-kuliah" placeholder="Nama mata kuliah" required />
+        </label>
+
+        <label class="field">
+          <div class="label-text">Deadline</div>
+          <input type="date" id="due-date" placeholder="Deadline" />
+        </label>
+
+        <button type="submit" class="btn btn-primary">+ Tambah Tugas</button>
+      </form>
+    </section>
+
+    <section class="card filter-card">
+      <div class="filter-tabs">
+        <button class="tab active" data-filter="all">Semua</button>
+        <button class="tab" data-filter="pending">Belum Selesai</button>
+        <button class="tab" data-filter="done">Selesai</button>
+      </div>
+
+      <div class="filter-row">
+        <input type="text" id="filter-text" placeholder="Cari berdasarkan mata kuliah atau judul..." />
+        <select id="page-size">
+          <option value="5">5 Nomor perhalaman</option>
+          <option value="10" selected>10 Nomor per halaman</option>
+          <option value="20">20 Nomor per halaman</option>
+        </select>
+      </div>
+    </section>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <div id="pagination" class="pagination"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
