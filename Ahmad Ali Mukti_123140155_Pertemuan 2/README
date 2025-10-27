@@ -1,0 +1,21 @@
+# Re:Mind - Aplikasi Pengelola Tugas Kuliah
+
+[![Build Status](https://img.shields.io/badge/status-complete-brightgreen)](link-ke-build-status-jika-ada)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Re:Mind adalah aplikasi web intuitif yang dirancang untuk membantu mahasiswa mengelola tugas-tugas kuliah mereka dengan mudah dan efisien. Dengan antarmuka yang bersih dan fitur-fitur yang praktis, Re:Mind memungkinkan Anda untuk melacak semua tugas, memantau kemajuan, dan memastikan tidak ada tenggat waktu yang terlewat.
+
+## Fitur Utama
+
+* **Tambah Tugas Baru:** Masukkan judul tugas, mata kuliah, dan tenggat waktu dengan cepat.
+* **Lihat Ringkasan Tugas:** Dapatkan gambaran sekilas tentang total tugas, tugas yang belum selesai, dan tugas yang sudah selesai.
+* **Daftar Tugas Interaktif:** Lihat semua tugas Anda dalam satu daftar, dengan opsi untuk menandai tugas sebagai selesai atau menghapusnya.
+* **Filter dan Pencarian:** Saring tugas berdasarkan status (Semua, Belum Selesai, Selesai) atau cari berdasarkan nama tugas atau mata kuliah.
+* **Mode Terang/Gelap:** Beralih antara mode terang dan gelap untuk pengalaman pengguna yang lebih nyaman.
+
+## Screenshot Aplikasi
+
+Berikut adalah beberapa tampilan antarmuka aplikasi Re:Mind:
+
+### Tampilan Utama (Mode Gelap)
+http://googleusercontent.com/image_generation_content/0
