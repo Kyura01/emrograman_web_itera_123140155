@@ -26,22 +26,20 @@ Aplikasi ini dibangun dengan JavaScript modern (ES6+), memanfaatkan fitur-fitur 
   <tr>
     <td align="center">
       <strong>Mode Gelap (Tampilan Utama)</strong><br>
-      <img src="modegelap.png" alt="Tampilan Mode Gelap" width="400">
+      <img src="screnshoot/modegelap.png" alt="Tampilan Mode Gelap" width="400">
     </td>
     <td align="center">
       <strong>Mode Terang (Form Tambah Tugas)</strong><br>
-      <img src="modeterang.jpg" alt="Tampilan Mode Terang" width="400">
+      <img src="screnshoot/modeterang.jpg" alt="Tampilan Mode Terang" width="400">
     </td>
   </tr>
   <tr>
     <td colspan="2" align="center">
       <br><strong>Daftar Tugas & Fitur Filter/Paginasi</strong><br>
-      <img src="tambah.jpg" alt="Daftar Tugas dan Filter" width="800">
+      <img src="screnshoot/tambah.jpg" alt="Daftar Tugas dan Filter" width="800">
     </td>
   </tr>
 </table>
-
-*(Catatan: Pastikan file gambar `image_c6188b.png`, `image_c615c3.jpg`, dan `image_c61869.jpg` berada di root repositori Anda agar dapat tampil)*
 
 ## 🛠️ Fitur ES6+ & Teknologi yang Digunakan
 
