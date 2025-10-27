@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="header-content">
+        <div class="header-text">
+          <h1>Re:Mind</h1>
+          <p>Kelola tugas kuliahmu dengan mudah dan efisien!</p>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12 17.5a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Zm0 1.5a7 7 0 1 1 0-14 7 7 0 0 1 0 14Zm0-16a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm0 15a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1ZM4 12a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Zm15 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM5.99 5.99a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 0 1-1.41 1.41L5.99 7.4a1 1 0 0 1 0-1.41Zm12.02 12.02a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 0 1-1.41 1.41l-1.42-1.42a1 1 0 0 1 0-1.41Zm0-12.02a1 1 0 0 1 0 1.41l-1.42 1.42a1 1 0 1 1-1.41-1.41l1.42-1.42a1 1 0 0 1 1.41 0ZM5.99 18.01a1 1 0 0 1 0-1.41l1.42-1.42a1 1 0 1 1 1.41 1.41l-1.42 1.42a1 1 0 0 1-1.41 0Z"/>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M12.375 22.5a10.453 10.453 0 0 1-8.937-5.993 10.525 10.525 0 0 1 2.4-13.5.75.75 0 0 1 1.162.896 9.034 9.034 0 0 0 13.5 11.527.75.75 0 0 1 1.162.896 10.514 10.514 0 0 1-9.287 6.174Z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-title">Total Tugas</div>
+        <div class="stat-value"><span id="task-count">0</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Belum Selesai</div>
+        <div class="stat-value"><span id="todo-count">0</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-title">Selesai</div>
+        <div class="stat-value"><span id="done-count">0</span></div>
+      </div>
+    </div>
+
+    <section class="card add-card">
+      <h2 class="card-title">+ Tambah Tugas Baru</h2>
+      <form id="task-form" class="task-form" action="">
+        <label class="field">
+          <div class="label-text">Nama Tugas <span class="required">*</span></div>
+          <input type="text" id="task-input" placeholder="Judul tugas" required />
+        </label>
+
+        <label class="field">
+          <div class="label-text">Mata Kuliah</div>
+          <input type="text" id="mata-kuliah" placeholder="Nama mata kuliah" required />
+        </label>
+
+        <label class="field">
+          <div class="label-text">Deadline</div>
+          <input type="date" id="due-date" placeholder="Deadline" />
+        </label>
+
+        <button type="submit" class="btn btn-primary">+ Tambah Tugas</button>
+      </form>
+    </section>
+
+    <section class="card filter-card">
+      <div class="filter-tabs">
+        <button class="tab active" data-filter="all">Semua</button>
+        <button class="tab" data-filter="pending">Belum Selesai</button>
+        <button class="tab" data-filter="done">Selesai</button>
+      </div>
+
+      <div class="filter-row">
+        <input type="text" id="filter-text" placeholder="Cari berdasarkan mata kuliah atau judul..." />
+        <select id="page-size">
+          <option value="5">5 Nomor perhalaman</option>
+          <option value="10" selected>10 Nomor per halaman</option>
+          <option value="20">20 Nomor per halaman</option>
+        </select>
+      </div>
+    </section>
+
+    <ul id="task-list" class="task-list"></ul>
+
+    <div id="pagination" class="pagination"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
