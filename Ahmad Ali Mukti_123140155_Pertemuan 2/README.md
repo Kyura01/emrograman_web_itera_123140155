@@ -26,7 +26,7 @@ Aplikasi ini dibangun dengan JavaScript modern (ES6+), memanfaatkan fitur-fitur 
   <tr>
     <td align="center">
       <strong>Mode Gelap (Tampilan Utama)</strong><br>
-      <img src="modegelap.png" alt="Tampilan Mode Gelap" width="400">
+      <img src="screenshoot/modegelap.png" alt="Tampilan Mode Gelap" width="400">
     </td>
     <td align="center">
       <strong>Mode Terang (Form Tambah Tugas)</strong><br>
