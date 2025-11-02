@@ -20,7 +20,10 @@ const Navigation = () => {
           <button
             key={item.id}
             onClick={() => {
-              // keep navigation and filter select in sync
+              // Ketika user klik item navigation, kita:
+              // - setCurrentPage untuk menandai halaman aktif (highlight)
+              // - setFilterStatus agar daftar buku ikut terfilter sesuai item
+              // Dengan cara ini Navigation dan FilterBar akan tetap sinkron
               setCurrentPage(item.id);
               setFilterStatus(item.id);
             }}

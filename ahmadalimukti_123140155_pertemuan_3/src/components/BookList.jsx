@@ -9,6 +9,8 @@ const BookList = () => {
   const [editingBook, setEditingBook] = useState(null);
   const [notification, setNotification] = useState(null);
   
+  // Ambil daftar buku yang telah difilter oleh BookContext (berdasarkan filterStatus dan searchQuery)
+  // getFilteredBooks mengembalikan array buku yang sudah melewati aturan filter
   const filteredBooks = getFilteredBooks();
 
   const showNotification = (message, type = 'success') => {

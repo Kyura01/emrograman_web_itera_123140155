@@ -18,7 +18,10 @@ const FilterBar = () => {
       <select
         value={filterStatus}
         onChange={(e) => {
-          // keep select and navigation in sync
+          // Saat user memilih status dari dropdown, lakukan sinkronisasi:
+          // - setFilterStatus: mengubah status filter global sehingga BookList terfilter
+          // - setCurrentPage: menjaga agar Navigation juga menandai item yang sesuai
+          // Contoh: memilih "dimiliki" akan menampilkan hanya buku dengan status 'dimiliki'
           setFilterStatus(e.target.value);
           setCurrentPage(e.target.value);
         }}

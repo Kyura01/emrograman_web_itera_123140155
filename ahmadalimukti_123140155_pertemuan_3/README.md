@@ -1,3 +1,100 @@
+# Perpustakaan Pribadi
+
+| Nama | Nim | Kelas |
+| ---- | --- | ----- |
+| Ahmad Ali Mukti | 123140155 | RA |
+
+## Deskripsi Aplikasi
+
+Perpustakaan Pribadi adalah aplikasi web sederhana untuk mengelola koleksi buku pribadi. Pengguna dapat menambah, mengedit, menghapus buku, mencari buku berdasarkan judul atau penulis, serta memfilter buku berdasarkan status koleksi (Dimiliki, Sedang Dibaca, Ingin Dibeli).
+
+Fitur utama:
+- Tambah, edit, hapus buku
+- Pencarian buku (judul / penulis)
+- Filter berdasarkan status buku
+- Navigasi cepat (navigation bar) yang tersinkronisasi dengan filter
+
+Kode utama terkait filtering berada di `src/context/BookContext.jsx` (fungsi `getFilteredBooks`) — fungsi ini menerapkan filter status dan pencarian (search query).
+
+## Screenshot
+
+Berikut beberapa tampilan aplikasi (disimpan di folder `SS.Doc`):
+
+Tampilan utama:
+
+![Tampilan utama](SS.Doc/tampilan.png)
+
+Form tambah buku:
+
+![Tambah buku](SS.Doc/tambah.png)
+
+Form edit buku:
+
+![Edit buku](SS.Doc/edit.png)
+
+> Jika gambar tidak muncul di GitHub, pastikan folder `SS.Doc` dan file gambar ikut di-push ke repository.
+
+## Struktur Utama Project
+
+- `src/` - kode sumber React
+  - `components/` - komponen UI seperti `Navigation`, `FilterBar`, `BookList`, `BookForm`, dll.
+  - `context/BookContext.jsx` - context global yang menyimpan data buku, filter, dan fungsi CRUD
+  - `hooks/` - custom hooks (`useFormValidation`, `useLocalStorage`)
+
+## Cara Instalasi (Development)
+
+Pastikan Anda punya Node.js (v14+) dan npm terinstal.
+
+1. Clone repository ini:
+
+```powershell
+git clone <repo-url>
+cd <repo-folder>
+```
+
+2. Install dependensi:
+
+```powershell
+npm install
+```
+
+3. Jalankan development server:
+
+```powershell
+npm start
+```
+
+Server akan menjalankan aplikasi pada `http://localhost:3000` (default untuk Create React App).
+
+## Cara Pakai (Singkat)
+
+1. Buka aplikasi di browser setelah menjalankan `npm start`.
+2. Gunakan tombol "Tambah Buku" untuk menambahkan data buku baru (judul, penulis, status wajib diisi).
+3. Gunakan kolom pencarian untuk memfilter buku berdasarkan judul atau penulis.
+4. Gunakan dropdown filter atau navigation bar untuk menampilkan buku berdasarkan status. Navigation dan FilterBar sudah tersinkronisasi, jadi klik navigation juga akan menerapkan filter yang sama.
+5. Untuk mengedit atau menghapus buku, gunakan tombol Edit / Hapus pada kartu buku.
+
+## Test
+
+Jalankan unit test hook yang tersedia:
+
+```powershell
+npm test
+```
+
+File test berada di `src/tests/` untuk custom hooks.
+
+## Catatan Teknis / Penjelasan Singkat
+
+- State global untuk buku, pencarian, dan filter dikelola oleh `BookContext`.
+- Fungsi `getFilteredBooks` di `BookContext.jsx` melakukan dua langkah filter: filter berdasarkan `filterStatus` lalu filter berdasarkan `searchQuery`.
+- Navigation dan FilterBar memanggil `setFilterStatus` dan `setCurrentPage` agar tampilan dan kontrol tetap sinkron.
+
+Jika ingin menambahkan fitur (mis. pagination, sorting, export CSV), cantumkan di issue atau buka PR.
+
+---
+
+Terima kasih. Jika Anda ingin README versi bahasa Inggris atau versi lebih ringkas/panjang, beri tahu saya.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

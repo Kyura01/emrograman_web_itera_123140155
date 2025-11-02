@@ -7,6 +7,9 @@ export const BookProvider = ({ children }) => {
   const [books, setBooks] = useLocalStorage('books', []);
   const [currentPage, setCurrentPage] = useState('semua');
   const [searchQuery, setSearchQuery] = useState('');
+  // filterStatus menyimpan status yang sedang dipakai untuk memfilter daftar buku
+  // nilai: 'semua' | 'dimiliki' | 'sedang-dibaca' | 'ingin-dibeli'
+  // setFilterStatus dapat dipanggil dari Navigation atau FilterBar untuk sinkronisasi
   const [filterStatus, setFilterStatus] = useState('semua');
 
   const addBook = (book) => {
@@ -47,12 +50,17 @@ export const BookProvider = ({ children }) => {
   };
 
   const getFilteredBooks = () => {
+    // Fungsi utama untuk melakukan filtering:
+    // 1) Filter berdasarkan status (filterStatus) jika bukan 'semua'
+    // 2) Kemudian filter berdasarkan pencarian (searchQuery) pada title atau author
     let filtered = books;
 
+    // Filter berdasarkan status jika dipilih selain 'semua'
     if (filterStatus !== 'semua') {
       filtered = filtered.filter(book => book.status === filterStatus);
     }
 
+    // Filter berdasarkan query pencarian (case-insensitive)
     if (searchQuery.trim() !== '') {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(book => 
