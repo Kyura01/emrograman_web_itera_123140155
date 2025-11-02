@@ -32,7 +32,6 @@ Form edit buku:
 
 ![Edit buku](SS.Doc/edit.png)
 
-> Jika gambar tidak muncul di GitHub, pastikan folder `SS.Doc` dan file gambar ikut di-push ke repository.
 
 ## Struktur Utama Project
 
@@ -90,11 +89,8 @@ File test berada di `src/tests/` untuk custom hooks.
 - Fungsi `getFilteredBooks` di `BookContext.jsx` melakukan dua langkah filter: filter berdasarkan `filterStatus` lalu filter berdasarkan `searchQuery`.
 - Navigation dan FilterBar memanggil `setFilterStatus` dan `setCurrentPage` agar tampilan dan kontrol tetap sinkron.
 
-Jika ingin menambahkan fitur (mis. pagination, sorting, export CSV), cantumkan di issue atau buka PR.
-
 ---
 
-Terima kasih. Jika Anda ingin README versi bahasa Inggris atau versi lebih ringkas/panjang, beri tahu saya.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
