@@ -1,0 +1,3 @@
+[run]
+source = pemweb_6
+omit = pemweb_6/test*

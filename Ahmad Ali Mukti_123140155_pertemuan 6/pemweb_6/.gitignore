@@ -1,0 +1,40 @@
+*.egg
+*.egg-info
+*.pyc
+*$py.class
+*~
+.coverage
+coverage.xml
+build/
+dist/
+.tox/
+nosetests.xml
+env*/
+tmp/
+Data.fs*
+*.sublime-project
+*.sublime-workspace
+.*.sw?
+.sw?
+.DS_Store
+coverage
+test
+
+# Configuration files with credentials
+development.ini
+production.ini
+.env
+*.env
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+pip-log.txt
+
+# IDE
+.vscode/
+.idea/
